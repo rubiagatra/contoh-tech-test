@@ -109,52 +109,6 @@
 - **Keandalan dan Kesalahan Toleran**: Strategi untuk menangani kegagalan dan memastikan ketersediaan.
 - **Keamanan**: Pertimbangan keamanan dalam desain.
 - **Komunikasi**: Kemampuan untuk menjelaskan desain dan pilihan teknis secara efektif.
--
-# Pair Programming Interview Test
-
-## Deskripsi Test
-- **Tujuan**: Mengukur kemampuan kandidat untuk berkolaborasi, berkomunikasi, dan menulis kode secara efisien dalam setting pair programming.
-- **Format**: Dua programmer (satu pewawancara dan satu kandidat) bekerja bersama untuk menyelesaikan serangkaian tugas pemrograman.
-- **Durasi**: 60-90 menit.
-
-## Persiapan
-- Siapkan sebuah lingkungan pengembangan dengan alat-alat yang diperlukan (IDE, akses ke repository, dokumentasi).
-- Tentukan bahasa pemrograman dan teknologi yang akan digunakan berdasarkan persyaratan pekerjaan.
-- Siapkan daftar tugas dan soal yang akan dikerjakan.
-
-## Skenario Test
-
-### Skenario 1: Refactoring Kode
-- **Deskripsi**: Refactor sebuah blok kode yang telah ditulis sebelumnya untuk meningkatkan efisiensi dan keterbacaan.
-- **Fokus**: Kualitas kode, pemahaman clean code, dan best practices.
-
-### Skenario 2: Menambahkan Fitur Baru
-- **Deskripsi**: Menambahkan fitur baru ke dalam aplikasi atau sistem yang sudah ada.
-- **Fokus**: Kemampuan untuk memahami basis kode yang ada, integrasi fitur, dan testing.
-
-### Skenario 3: Debugging dan Penyelesaian Masalah
-- **Deskripsi**: Identifikasi dan perbaiki bugs dalam sebuah aplikasi atau sistem.
-- **Fokus**: Kemampuan analisis, debugging, dan pemecahan masalah.
-
-### Skenario 4: Desain Algoritma
-- **Deskripsi**: Kembangkan dan implementasikan algoritma untuk menyelesaikan masalah pemrograman tertentu.
-- **Fokus**: Pemahaman algoritma, efisiensi kode, dan logika pemrograman.
-
-### Skenario 5: Review Kode
-- **Deskripsi**: Melakukan code review terhadap potongan kode yang ditulis oleh orang lain.
-- **Fokus**: Pemahaman best practices, komunikasi feedback, dan kemampuan kolaboratif.
-
-## Kriteria Penilaian
-- **Kolaborasi**: Kemampuan bekerja dengan orang lain dan berbagi tanggung jawab.
-- **Komunikasi**: Kejelasan dalam menyampaikan ide dan menerima masukan.
-- **Kode**: Kualitas, keefektifan, dan kebersihan kode yang ditulis.
-- **Problem Solving**: Pendekatan dan efektivitas dalam pemecahan masalah.
-- **Adaptasi**: Kemampuan untuk cepat beradaptasi dengan kode dan ide baru.
-
-## Catatan untuk Pewawancara
-- Selama sesi, bergantian peran antara 'driver' yang menulis kode dan 'navigator' yang memberikan arahan.
-- Pastikan untuk memberi kandidat kesempatan untuk berperan sebagai kedua-duanya.
-- Berikan masukan konstruktif dan dorongan sepanjang sesi.
 
 # Pair Programming Interview Test
 
@@ -174,13 +128,44 @@
 - **Deskripsi**: Refactor sebuah blok kode yang telah ditulis sebelumnya untuk meningkatkan efisiensi dan keterbacaan.
 - **Fokus**: Kualitas kode, pemahaman clean code, dan best practices.
 
+```javascript
+function processItems(items) {
+    var result = [];
+    for (var i = 0; i < items.length; i++) {
+        if (items[i].isActive) {
+            result.push(items[i].name.toUpperCase());
+        }
+    }
+    return result;
+}
+```
+
 ### Skenario 2: Menambahkan Fitur Baru
 - **Deskripsi**: Menambahkan fitur baru ke dalam aplikasi atau sistem yang sudah ada.
 - **Fokus**: Kemampuan untuk memahami basis kode yang ada, integrasi fitur, dan testing.
 
+```javascript
+function getUser(id) {
+    return database.findUserById(id); // database.findUserById adalah fungsi fiktif
+}
+```
+
 ### Skenario 3: Debugging dan Penyelesaian Masalah
 - **Deskripsi**: Identifikasi dan perbaiki bugs dalam sebuah aplikasi atau sistem.
 - **Fokus**: Kemampuan analisis, debugging, dan pemecahan masalah.
+ 
+```javascript
+function mergeArrays(arr1, arr2) {
+    let merged = [];
+    for (let i = 0; i < arr1.length; i++) {
+        merged.push(arr1[i]);
+    }
+    for (let j = 0; i < arr2.length; j++) { // Notice the wrong usage of 'i' instead of 'j'
+        merged.push(arr2[j]);
+    }
+    return merged;
+}
+```
 
 ### Skenario 4: Desain Algoritma
 - **Deskripsi**: Kembangkan dan implementasikan algoritma untuk menyelesaikan masalah pemrograman tertentu.
